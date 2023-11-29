@@ -19,7 +19,7 @@ if (strlen($_SESSION['alogin']) == "") {
         if ($lastInsertId) {
             $msg = "Tạo lớp học thành công";
         } else {
-            $error = "Something went wrong. Please try again";
+            $error = "Dính lỗi rồi thử lại sau đi";
         }
     }
 ?>
@@ -31,12 +31,12 @@ if (strlen($_SESSION['alogin']) == "") {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>QLHS Admin | Tạo lớp học</title>
-        <link rel="stylesheet" href="css/bootstrap.css" media="screen">
-        <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
-        <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
-        <link rel="stylesheet" href="css/lobipanel/lobipanel.min.css" media="screen">
-        <link rel="stylesheet" href="css/prism/prism.css" media="screen"> <!-- USED FOR DEMO HELP - YOU CAN REMOVE IT -->
-        <link rel="stylesheet" href="css/main.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/bootstrap.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/font-awesome.min.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/animate-css/animate.min.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/lobipanel/lobipanel.min.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/prism/prism.css" media="screen"> <!-- USED FOR DEMO HELP - YOU CAN REMOVE IT -->
+        <link rel="stylesheet" href="front-end/css/main.css" media="screen">
         <script src="js/modernizr/modernizr.min.js"></script>
         <style>
             .errorWrap {
@@ -113,7 +113,7 @@ if (strlen($_SESSION['alogin']) == "") {
                                             </div>
                                             <?php if ($msg) { ?>
                                                 <div class="alert alert-success left-icon-alert" role="alert">
-                                                    <strong>Tuyệt vời!</strong><?php echo htmlentities($msg); ?>
+                                                    <strong>Tuyệt vời! </strong><?php echo htmlentities($msg); ?>
                                                 </div><?php } else if ($error) { ?>
                                                 <div class="alert alert-danger left-icon-alert" role="alert">
                                                     <strong>Ôi không!</strong> <?php echo htmlentities($error); ?>

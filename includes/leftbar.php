@@ -74,7 +74,8 @@
 
 
 
-            <li><a href="change-password.php"><i class="fa fa fa-server"></i> <span> Đổi mật khẩu admin</span></a></li>
+            <li><a href="change-password.php"><i class="fa fa fa-server"></i> <span> Đổi mật khẩu
+                        admin</span></a></li>
 
 
         </div>

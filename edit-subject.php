@@ -15,7 +15,7 @@ if (strlen($_SESSION['alogin']) == "") {
         $query->bindParam(':subjectcode', $subjectcode, PDO::PARAM_STR);
         $query->bindParam(':sid', $sid, PDO::PARAM_STR);
         $query->execute();
-        $msg = "Subject Info updated successfully";
+        $msg = "Cập nhật thông tin môn học thành công";
     }
 ?>
     <!DOCTYPE html>
@@ -26,13 +26,13 @@ if (strlen($_SESSION['alogin']) == "") {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>QLHS Admin | Cập nhật môn học </title>
-        <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
-        <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
-        <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
-        <link rel="stylesheet" href="css/lobipanel/lobipanel.min.css" media="screen">
-        <link rel="stylesheet" href="css/prism/prism.css" media="screen">
-        <link rel="stylesheet" href="css/select2/select2.min.css">
-        <link rel="stylesheet" href="css/main.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/bootstrap.min.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/font-awesome.min.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/animate-css/animate.min.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/lobipanel/lobipanel.min.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/prism/prism.css" media="screen">
+        <link rel="stylesheet" href="front-end/css/select2/select2.min.css">
+        <link rel="stylesheet" href="front-end/css/main.css" media="screen">
         <script src="js/modernizr/modernizr.min.js"></script>
     </head>
 
@@ -86,10 +86,10 @@ if (strlen($_SESSION['alogin']) == "") {
                                         <div class="panel-body">
                                             <?php if ($msg) { ?>
                                                 <div class="alert alert-success left-icon-alert" role="alert">
-                                                    <strong>Well done!</strong><?php echo htmlentities($msg); ?>
+                                                    <strong>Tuyệt vời! </strong><?php echo htmlentities($msg); ?>
                                                 </div><?php } else if ($error) { ?>
                                                 <div class="alert alert-danger left-icon-alert" role="alert">
-                                                    <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                                    <strong>Ôi không! </strong> <?php echo htmlentities($error); ?>
                                                 </div>
                                             <?php } ?>
                                             <form class="form-horizontal" method="post">
@@ -122,7 +122,8 @@ if (strlen($_SESSION['alogin']) == "") {
 
                                                 <div class="form-group">
                                                     <div class="col-sm-offset-2 col-sm-10">
-                                                        <button type="submit" name="Update" class="btn btn-primary">Update</button>
+                                                        <button type="submit" name="Update" class="btn btn-primary">Cập
+                                                            nhật</button>
                                                     </div>
                                                 </div>
                                             </form>
