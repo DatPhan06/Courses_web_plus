@@ -14,7 +14,7 @@ if (strlen($_SESSION['alogin']) == "") {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SRMS | Bảng điều khiển</title>
+    <title>QLHS | Bảng điều khiển</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
@@ -115,7 +115,7 @@ if (strlen($_SESSION['alogin']) == "") {
                                             ?>
 
                                         <span class="number counter"><?php echo htmlentities($totalresults); ?></span>
-                                        <span class="name">Results Declared</span>
+                                        <span class="name">Kết quả</span>
                                         <span class="bg-icon"><i class="fa fa-file-text"></i></span>
                                     </a>
                                     <!-- /.dashboard-stat -->
@@ -196,7 +196,7 @@ if (strlen($_SESSION['alogin']) == "") {
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
         }
-        toastr["success"]("Chào mừng bạn đến với hệ thống quản lí khóa học!");
+        toastr["success"]("Chào mừng bạn đến với hệ thống quản lí sinh viên!");
 
     });
     </script>

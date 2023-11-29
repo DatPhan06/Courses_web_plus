@@ -8,9 +8,9 @@ include('includes/config.php');
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="student result management system" />
+    <meta name="description" content="Hệ thống quản lí sinh viên" />
     <meta name="author" content="GPW Team" />
-    <title>SRMS - Student Result Management System</title>
+    <title>Hệ thống quản lí sinh viên</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -21,7 +21,7 @@ include('includes/config.php');
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.php">SRMS - Student Result Management System</a>
+            <a class="navbar-brand" href="index.php">Hệ thống quản lí sinh viên</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -45,7 +45,7 @@ include('includes/config.php');
                     <hr color="#000" />
                     <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
                         <ul>
-                            <?php $sql = "SELECT * from tblnotice";
+                            <?php $sql = "SELECT * from notice";
                             $query = $dbh->prepare($sql);
                             $query->execute();
                             $results = $query->fetchAll(PDO::FETCH_OBJ);

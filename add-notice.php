@@ -2,141 +2,141 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
-if(strlen($_SESSION['alogin'])==""){  
+if (strlen($_SESSION['alogin']) == "") {
     header("Location: index.php");
-     }else{
-if(isset($_POST['submit']))
-{
-$ntitle=$_POST['noticetitle'];
-$ndetails=$_POST['noticedetails']; 
-$sql="INSERT INTO  notice(noticeTitle,noticeDetails) VALUES(:ntitle,:ndetails)";
-$query = $dbh->prepare($sql);
-$query->bindParam(':ntitle',$ntitle,PDO::PARAM_STR);
-$query->bindParam(':ndetails',$ndetails,PDO::PARAM_STR);
-$query->execute();
-$lastInsertId = $dbh->lastInsertId();
-if($lastInsertId)
-{
-echo '<script>alert("Notice added succesfully")</script>';
-echo "<script>window.location.href ='manage-notices.php'</script>";
-}else {
-echo '<script>alert("Something went wrong. Please try again.")</script>';
-}
-
-}
+} else {
+    if (isset($_POST['submit'])) {
+        $ntitle = $_POST['noticetitle'];
+        $ndetails = $_POST['noticedetails'];
+        $sql = "INSERT INTO  notice(noticeTitle,noticeDetails) VALUES(:ntitle,:ndetails)";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(':ntitle', $ntitle, PDO::PARAM_STR);
+        $query->bindParam(':ndetails', $ndetails, PDO::PARAM_STR);
+        $query->execute();
+        $lastInsertId = $dbh->lastInsertId();
+        if ($lastInsertId) {
+            echo '<script>alert("Notice added succesfully")</script>';
+            echo "<script>window.location.href ='manage-notices.php'</script>";
+        } else {
+            echo '<script>alert("Something went wrong. Please try again.")</script>';
+        }
+    }
 ?>
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>SRMS Admin | Thêm hông báo mới</title>
-        <link rel="stylesheet" href="css/bootstrap.css" media="screen" >
-        <link rel="stylesheet" href="css/font-awesome.min.css" media="screen" >
-        <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen" >
-        <link rel="stylesheet" href="css/lobipanel/lobipanel.min.css" media="screen" >
-        <link rel="stylesheet" href="css/prism/prism.css" media="screen" > <!-- USED FOR DEMO HELP - YOU CAN REMOVE IT -->
-        <link rel="stylesheet" href="css/main.css" media="screen" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>QLHS Admin | Thêm thông báo mới</title>
+        <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+        <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
+        <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
+        <link rel="stylesheet" href="css/lobipanel/lobipanel.min.css" media="screen">
+        <link rel="stylesheet" href="css/prism/prism.css" media="screen"> <!-- USED FOR DEMO HELP - YOU CAN REMOVE IT -->
+        <link rel="stylesheet" href="css/main.css" media="screen">
         <script src="js/modernizr/modernizr.min.js"></script>
-         <style>
-        .errorWrap {
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #dd3d36;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-.succWrap{
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #5cb85c;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
+        <style>
+            .errorWrap {
+                padding: 10px;
+                margin: 0 0 20px 0;
+                background: #fff;
+                border-left: 4px solid #dd3d36;
+                -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+            }
+
+            .succWrap {
+                padding: 10px;
+                margin: 0 0 20px 0;
+                background: #fff;
+                border-left: 4px solid #5cb85c;
+                -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+            }
         </style>
     </head>
+
     <body class="top-navbar-fixed">
         <div class="main-wrapper">
 
             <!-- ========== TOP NAVBAR ========== -->
-            <?php include('includes/topbar.php');?>   
-       
+            <?php include('includes/topbar.php'); ?>
+
             <div class="content-wrapper">
                 <div class="content-container">
 
 
-<?php include('includes/leftbar.php');?>                   
+                    <?php include('includes/leftbar.php'); ?>
 
 
                     <div class="main-page">
                         <div class="container-fluid">
                             <div class="row page-title-div">
                                 <div class="col-md-6">
-                                    <h2 class="title">Thêm hông báo mới</h2>
+                                    <h2 class="title">Thêm thông báo mới</h2>
                                 </div>
-                                
+
                             </div>
-                      
+
                             <div class="row breadcrumb-div">
                                 <div class="col-md-6">
                                     <ul class="breadcrumb">
-            							<li><a href="dashboard.php"><i class="fa fa-home"></i> Trang chủ</a></li>
-            							<li><a href="#">Thông báo</a></li>
-            							<li class="active">Thêm hông báo mới</li>
-            						</ul>
+                                        <li><a href="dashboard.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+                                        <li><a href="#">Thông báo</a></li>
+                                        <li class="active">Thêm thông báo mới</li>
+                                    </ul>
                                 </div>
-                               
+
                             </div>
-                      
+
                         </div>
-               
+
 
                         <section class="section">
                             <div class="container-fluid">
 
-                             
 
-                              
+
+
 
                                 <div class="row">
                                     <div class="col-md-8 col-md-offset-2">
                                         <div class="panel">
                                             <div class="panel-heading">
                                                 <div class="panel-title">
-                                                    <h5>Thêm hông báo mới</h5>
+                                                    <h5>Thêm thông báo mới</h5>
                                                 </div>
                                             </div>
-  
+
                                             <div class="panel-body">
 
                                                 <form method="post">
                                                     <div class="form-group has-success">
                                                         <label for="success" class="control-label">Tiêu đề</label>
-                                                		<div class="">
-                                                			<input type="text" name="noticetitle" class="form-control" required="required" id="noticetitle">
-                                                		</div>
-                                                	</div>
-                                                       <div class="form-group has-success">
+                                                        <div class="">
+                                                            <input type="text" name="noticetitle" class="form-control" required="required" id="noticetitle">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group has-success">
                                                         <label for="success" class="control-label">Nội dung</label>
                                                         <div class="">
-                                                  <textarea class="form-control" name="noticedetails" required rows="5"></textarea>
+                                                            <textarea class="form-control" name="noticedetails" required rows="5"></textarea>
                                                         </div>
                                                     </div>
 
-  <div class="form-group has-success">
+                                                    <div class="form-group has-success">
 
                                                         <div class="">
-                                                           <button type="submit" name="submit" class="btn btn-success btn-labeled">Xác nhận<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
-                                                    </div>
+                                                            <button type="submit" name="submit" class="btn btn-success btn-labeled">Xác nhận<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
+                                                        </div>
 
 
-                                                    
+
                                                 </form>
 
-                                              
+
                                             </div>
                                         </div>
                                     </div>
@@ -144,8 +144,8 @@ echo '<script>alert("Something went wrong. Please try again.")</script>';
                                 </div>
                                 <!-- /.row -->
 
-                               
-                               
+
+
 
                             </div>
                             <!-- /.container-fluid -->
@@ -180,10 +180,11 @@ echo '<script>alert("Something went wrong. Please try again.")</script>';
 
 
         <!-- ========== ADD custom.js FILE BELOW WITH YOUR CHANGES ========== -->
-		
-		        <!-- Footer-->
+
+        <!-- Footer-->
         <footer class="py-5 bg-dark">
         </footer>
     </body>
-</html>
+
+    </html>
 <?php  } ?>

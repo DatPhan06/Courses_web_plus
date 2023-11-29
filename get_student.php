@@ -9,11 +9,11 @@ if (!empty($_POST["classid"])) {
   } else {
     $stmt = $dbh->prepare("SELECT StudentName,StudentId FROM students WHERE ClassId= :id order by StudentName");
     $stmt->execute(array(':id' => $cid));
-?><option value="">Chọn học sinh </option><?php
+?><option value="">Chọn sinh viên </option><?php
                                             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                                             ?>
-<option value="<?php echo htmlentities($row['StudentId']); ?>"><?php echo htmlentities($row['StudentName']); ?></option>
-<?php
+      <option value="<?php echo htmlentities($row['StudentId']); ?>"><?php echo htmlentities($row['StudentName']); ?></option>
+    <?php
                                             }
                                           }
                                         }
@@ -30,8 +30,7 @@ if (!empty($_POST["classid"])) {
                                             $stmt->execute(array(':cid' => $cid1, ':stts' => $status));
 
                                             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-<p> <?php echo htmlentities($row['SubjectName']); ?><input type="text" name="marks[]" value="" class="form-control"
-        required="" placeholder="Enter marks out of 100" autocomplete="off"></p>
+      <p> <?php echo htmlentities($row['SubjectName']); ?><input type="text" name="marks[]" value="" class="form-control" required="" placeholder="Enter marks out of 100" autocomplete="off"></p>
 
 <?php  }
                                           }
@@ -55,8 +54,8 @@ if (!empty($_POST["studclass"])) {
   $results = $query->fetchAll(PDO::FETCH_OBJ);
   $cnt = 1;
   if ($query->rowCount() > 0) { ?>
-<p>
-    <?php
+    <p>
+      <?php
       echo "<span style='color:red'> Đã khai báo rồi</span>";
       echo "<script>$('#submit').prop('disabled',true);</script>";
       ?></p>
