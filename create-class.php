@@ -37,7 +37,7 @@ if (strlen($_SESSION['alogin']) == "") {
         <link rel="stylesheet" href="front-end/css/lobipanel/lobipanel.min.css" media="screen">
         <link rel="stylesheet" href="front-end/css/prism/prism.css" media="screen"> <!-- USED FOR DEMO HELP - YOU CAN REMOVE IT -->
         <link rel="stylesheet" href="front-end/css/main.css" media="screen">
-        <script src="js/modernizr/modernizr.min.js"></script>
+        <script src="front-end/js/modernizr/modernizr.min.js"></script>
         <style>
             .errorWrap {
                 padding: 10px;
@@ -185,18 +185,18 @@ if (strlen($_SESSION['alogin']) == "") {
         <!-- /.main-wrapper -->
 
         <!-- ========== COMMON JS FILES ========== -->
-        <script src="js/jquery/jquery-2.2.4.min.js"></script>
-        <script src="js/jquery-ui/jquery-ui.min.js"></script>
-        <script src="js/bootstrap/bootstrap.min.js"></script>
-        <script src="js/pace/pace.min.js"></script>
-        <script src="js/lobipanel/lobipanel.min.js"></script>
-        <script src="js/iscroll/iscroll.js"></script>
+        <script src="front-end/js/jquery/jquery-2.2.4.min.js"></script>
+        <script src="front-end/js/jquery-ui/jquery-ui.min.js"></script>
+        <script src="front-end/js/bootstrap/bootstrap.min.js"></script>
+        <script src="front-end/js/pace/pace.min.js"></script>
+        <script src="front-end/js/lobipanel/lobipanel.min.js"></script>
+        <script src="front-end/js/iscroll/iscroll.js"></script>
 
         <!-- ========== PAGE JS FILES ========== -->
-        <script src="js/prism/prism.js"></script>
+        <script src="front-end/js/prism/prism.js"></script>
 
         <!-- ========== THEME JS ========== -->
-        <script src="js/main.js"></script>
+        <script src="front-end/js/main.js"></script>
 
 
 

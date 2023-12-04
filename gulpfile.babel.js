@@ -41,7 +41,7 @@ gulp.task("styles", () => {
 // To minify scripts
 gulp.task("scripts", () => {
   return gulp
-    .src(["js/*.js", "!js/*.min.js"])
+    .src(["front-end/js/*.js", "!js/*.min.js"])
     .pipe($.plumber())
     .pipe($.uglify({ preserveComments: "license" }))
     .pipe(
@@ -64,7 +64,7 @@ function lint(files, options) {
   };
 }
 
-gulp.task("lint", lint("js/*.js"));
+gulp.task("lint", lint("front-end/js/*.js"));
 
 // Uncomment following if you want to minify HTML files
 /*
@@ -106,7 +106,7 @@ gulp.task("serve", ["styles", "scripts"], () => {
   gulp.watch(["*.html", "images/**/*", "fonts/**/*"]).on("change", reload);
 
   gulp.watch("sass/**/*.scss", ["styles"]);
-  gulp.watch("js/**/*.js", ["scripts"]);
+  gulp.watch("front-end/js/**/*.js", ["scripts"]);
 });
 
 gulp.task("default", () => {

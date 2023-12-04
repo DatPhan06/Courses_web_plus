@@ -38,7 +38,7 @@ if (strlen($_SESSION['alogin']) == "") {
         <link rel="stylesheet" href="front-end/css/prism/prism.css" media="screen">
         <link rel="stylesheet" href="front-end/css/select2/select2.min.css">
         <link rel="stylesheet" href="front-end/css/main.css" media="screen">
-        <script src="js/modernizr/modernizr.min.js"></script>
+        <script src="front-end/js/modernizr/modernizr.min.js"></script>
     </head>
 
     <body class="top-navbar-fixed">
@@ -160,14 +160,14 @@ if (strlen($_SESSION['alogin']) == "") {
                 <!-- /.content-wrapper -->
             </div>
             <!-- /.main-wrapper -->
-            <script src="js/jquery/jquery-2.2.4.min.js"></script>
-            <script src="js/bootstrap/bootstrap.min.js"></script>
-            <script src="js/pace/pace.min.js"></script>
-            <script src="js/lobipanel/lobipanel.min.js"></script>
-            <script src="js/iscroll/iscroll.js"></script>
-            <script src="js/prism/prism.js"></script>
-            <script src="js/select2/select2.min.js"></script>
-            <script src="js/main.js"></script>
+            <script src="front-end/js/jquery/jquery-2.2.4.min.js"></script>
+            <script src="front-end/js/bootstrap/bootstrap.min.js"></script>
+            <script src="front-end/js/pace/pace.min.js"></script>
+            <script src="front-end/js/lobipanel/lobipanel.min.js"></script>
+            <script src="front-end/js/iscroll/iscroll.js"></script>
+            <script src="front-end/js/prism/prism.js"></script>
+            <script src="front-end/js/select2/select2.min.js"></script>
+            <script src="front-end/js/main.js"></script>
             <script>
                 $(function($) {
                     $(".js-states").select2();
